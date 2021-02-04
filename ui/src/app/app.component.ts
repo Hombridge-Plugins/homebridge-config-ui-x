@@ -24,6 +24,7 @@ export class AppComponent {
       'ru',
       'zh-CN',
       'zh-TW',
+      'he',
       'hu',
       'ja',
       'es',

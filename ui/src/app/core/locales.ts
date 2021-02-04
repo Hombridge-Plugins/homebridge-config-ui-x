@@ -8,6 +8,7 @@ import localeCs from '@angular/common/locales/cs';
 import localeRu from '@angular/common/locales/ru';
 import localeZhCn from '@angular/common/locales/zh-Hans';
 import localeZhTw from '@angular/common/locales/zh-Hant';
+import localeHe from '@angular/common/locales/he';
 import localeHu from '@angular/common/locales/hu';
 import localeJa from '@angular/common/locales/ja';
 import localeEs from '@angular/common/locales/es';
@@ -32,6 +33,7 @@ registerLocaleData(localeCs);
 registerLocaleData(localeRu);
 registerLocaleData(localeZhCn);
 registerLocaleData(localeZhTw);
+registerLocaleData(localeHe);
 registerLocaleData(localeHu);
 registerLocaleData(localeJa);
 registerLocaleData(localeEs);
@@ -57,6 +59,7 @@ export const supportedLocales = {
   ru: 'ru',
   'zh-CN': 'zh-Hans', // Chinese Simplified -> zh-cn -> zh-Hans
   'zh-TW': 'zh-Hant', // Chinese Traditional -> zh-tw -> zh-Hant
+  he: 'he',
   hu: 'hu',
   ja: 'ja',
   es: 'es',
