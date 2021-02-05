@@ -299,6 +299,12 @@
             ]
           },
           {
+            "title": "Hebrew (he)",
+            "enum": [
+              "henpm"
+            ]
+          },
+          {
             "title": "Hungarian (hu)",
             "enum": [
               "hu"
