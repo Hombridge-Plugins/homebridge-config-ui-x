@@ -11,7 +11,7 @@
 
     <div *ngIf="timeDiffError" class="text-center">
       <h3>{{ 'users.setup_2fa_cannot_setup_2fa' | translate }}</h3>
-      <p [translate]="'users.setup_2fa_server_time_out'" [translateParams]="{'timeDiffError': timeDiffError}"></p>
+      <p rtl [translate]="'users.setup_2fa_server_time_out'" [translateParams]="{'timeDiffError': timeDiffError}"></p>
     </div>
 
     <ngb-alert type="info" [dismissible]="false">
@@ -38,9 +38,9 @@
   </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-elegant" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')"
+    <button type="button" class="btn btn-elegant" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')" rtl
       [translate]="'form.button_cancel'">Cancel</button>
     <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="enable2fa()" *ngIf="!timeDiffError"
-      [disabled]="formGroup.invalid" [translate]="'users.setup_2fa_enable'">Enable 2FA</button>
+      [disabled]="formGroup.invalid" rtl [translate]="'users.setup_2fa_enable'">Enable 2FA</button>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="modal-content">
   <div class="modal-header">
-    <h5 class="modal-title">{{ presentTenseVerb }}: {{ pluginName }}</h5>
+    <h5 class="modal-title" rtl>{{ presentTenseVerb }}: {{ pluginName }}</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
       (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -9,16 +9,17 @@
   <div [hidden]="!onlineUpdateOk || actionComplete || showReleaseNotes" id="plugin-log-output" class="modal-body"></div>
   <div *ngIf="actionComplete" class="modal-body plugin-modal-body">
     <div *ngIf="updateSelf">
-      <h3 class="text-center primary-text" [translate]="'plugins.manage.message_restart_required'">Restart and Refresh
+      <h3 class="text-center primary-text" rtl [translate]="'plugins.manage.message_restart_required'">Restart and
+        Refresh
         Required</h3>
-      <p class="text-center grey-text" [translate]="'plugins.manage.message_thanks_for_upgrading_ui'">Thanks for
+      <p class="text-center grey-text" rtl [translate]="'plugins.manage.message_thanks_for_upgrading_ui'">Thanks for
         installing the latest version of Homebridge Config UI X.</p>
       <p [innerHTML]="'plugins.manage.message_restart_required_reason' | translate">
         After installing a new version you will need to restart Homebridge and
         <strong>refresh this page</strong> to ensure you have the latest version of the client.
       </p>
       <div class="text-center">
-        <button type="button" class="btn btn-elegant" data-dismiss="modal" (click)="onRestartHomebridgeClick()"
+        <button type="button" class="btn btn-elegant" data-dismiss="modal" (click)="onRestartHomebridgeClick()" rtl
           [translate]="'plugins.manage.button_restart_now'">Restart Homebridge Now</button>
       </div>
       <hr>
@@ -26,10 +27,10 @@
     <markdown hrefTargetBlank class="plugin-md" [data]="changeLog"></markdown>
   </div>
   <div *ngIf="!onlineUpdateOk" class="modal-body">
-    <h4 class="primary-text text-center" [translate]="'plugins.manage.label_manual_update_required'">
+    <h4 class="primary-text text-center" rtl [translate]="'plugins.manage.label_manual_update_required'">
       Manual Update Required
     </h4>
-    <p [translate]="'plugins.manage.label_online_updates_not_supported_on_windows'">
+    <p rtl [translate]="'plugins.manage.label_online_updates_not_supported_on_windows'">
       Online updates are not supported on Windows. You will need to upgrade Homebridge
       manually after stopping the Homebridge service.
     </p>
@@ -50,9 +51,9 @@ hb-service start</pre>
     <markdown hrefTargetBlank class="plugin-md" [data]="release.changelog"></markdown>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-elegant" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')"
+    <button type="button" class="btn btn-elegant" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')" rtl
       [translate]="'form.button_close'">Close</button>
     <button *ngIf="onlineUpdateOk && showReleaseNotes" type="button" class="btn btn-primary" data-dismiss="modal"
-      (click)="update()" [translate]="'plugins.button_update'">Update</button>
+      (click)="update()" rtl [translate]="'plugins.button_update'">Update</button>
   </div>
 </div>

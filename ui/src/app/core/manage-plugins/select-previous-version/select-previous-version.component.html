@@ -1,6 +1,6 @@
 <div class="modal-content">
   <div class="modal-header">
-    <h5 class="modal-title">{{'plugins.manage.label_install' | translate}}: {{ plugin.name }}</h5>
+    <h5 class="modal-title" rtl>{{'plugins.manage.label_install' | translate}}: {{ plugin.name }}</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
       (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -14,7 +14,7 @@
 
     <div class="w-100  text-center" *ngIf="!loading">
       <i class="fas fa-history primary-text" style="font-size: 50px;"></i>
-      <p class="mt-4">
+      <p class="mt-4" rtl>
         {{ 'plugins.manage.message_select_version_to_install' | translate }}:
       </p>
       <select class="custom-select" [(ngModel)]="selectedVersion">
@@ -27,11 +27,11 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-elegant mr-auto" data-dismiss="modal"
-      (click)="activeModal.dismiss('Cross click')">
+      (click)="activeModal.dismiss('Cross click')" rtl>
       {{'form.button_cancel' | translate}}
     </button>
     <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="doInstall()"
-      [disabled]="!selectedVersion || loading">
+      [disabled]="!selectedVersion || loading" rtl>
       {{'plugins.button_install' | translate }}
     </button>
   </div>

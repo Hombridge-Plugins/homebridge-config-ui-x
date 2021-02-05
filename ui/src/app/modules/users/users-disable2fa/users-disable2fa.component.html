@@ -10,10 +10,10 @@
     <p>{{ 'users.setup_2fa_disable_enter_current_password' | translate }}</p>
 
     <div class="form-group">
-      <input class="form-control" type="password" autocomplete="current-password" [formControl]="formGroup.controls['password']"
-        [placeholder]="'users.label_password' | translate">
+      <input class="form-control" type="password" autocomplete="current-password"
+        [formControl]="formGroup.controls['password']" [placeholder]="'users.label_password' | translate">
     </div>
-    <p class="red-text" *ngIf="invalidCredentials"><small
+    <p class="red-text" *ngIf="invalidCredentials"><small rtl
         [translate]="'login.message_invalid_username_or_password'">Invalid
         Username and Password</small></p>
   </div>

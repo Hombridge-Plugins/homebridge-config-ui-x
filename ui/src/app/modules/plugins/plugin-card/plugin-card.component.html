@@ -2,11 +2,11 @@
 <div class="card card-body mb-3">
   <div class="d-flex flex-row justify-content-between">
     <div class="">
-      <p class="mb-0 primary-text" *ngIf="plugin.installedVersion && !plugin.updateAvailable && !plugin.disabled"
+      <p class="mb-0 primary-text" *ngIf="plugin.installedVersion && !plugin.updateAvailable && !plugin.disabled" rtl
         [translate]="'plugins.status_installed'">
         Installed
       </p>
-      <p class="mb-0 grey-text" *ngIf="!plugin.installedVersion" [translate]="'plugins.status_not_installed'">
+      <p class="mb-0 grey-text" *ngIf="!plugin.installedVersion" rtl [translate]="'plugins.status_not_installed'">
         Not Installed
       </p>
       <p class="mb-0 primary-text" *ngIf="plugin.updateAvailable && !plugin.disabled">
@@ -50,7 +50,7 @@
       {{ 'plugins.button_settings' | translate | uppercase }}
     </a>
     <a class="card-link" *ngIf="plugin.updateAvailable" (click)="$plugin.updatePlugin(plugin)" placement="bottom"
-      ngbTooltip="{{'plugins.tooltip_update_plugin_to' | translate:plugin }}" container="body" openDelay="150"
+      ngbTooltip="{{'plugins.tooltip_update_plugin_to' | translate:plugin }}" container="body" openDelay="150" rtl
       [translate]="'plugins.button_update'">
       {{ 'plugins.button_update' | translate | uppercase }}
     </a>
@@ -66,24 +66,25 @@
           </span>
         </a>
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button ngbDropdownItem *ngIf="plugin.publicPackage" (click)="$plugin.installPreviousVersion(plugin)">
+          <button ngbDropdownItem *ngIf="plugin.publicPackage" (click)="$plugin.installPreviousVersion(plugin)" rtl>
             <i class="fas fa-fw fa-history"></i>
             {{ 'plugins.manage.message_install_previous_version' | translate }}
           </button>
           <button ngbDropdownItem (click)="$plugin.bridgeSettings(plugin)"
-            *ngIf="plugin.installedVersion && plugin.name !== 'homebridge-config-ui-x' && canManageBridgeSettings">
+            *ngIf="plugin.installedVersion && plugin.name !== 'homebridge-config-ui-x' && canManageBridgeSettings" rtl>
             <i class="fas fa-fw fa-project-diagram"></i> {{ 'child_bridge.label_bridge_settings' | translate }}
           </button>
           <button ngbDropdownItem (click)="disablePlugin(plugin)"
-            *ngIf="plugin.installedVersion && plugin.name !== 'homebridge-config-ui-x' && !plugin.disabled && canDisablePlugins">
+            *ngIf="plugin.installedVersion && plugin.name !== 'homebridge-config-ui-x' && !plugin.disabled && canDisablePlugins"
+            rtl>
             <i class="far fa-fw fa-times-circle"></i> {{ 'plugins.manage.disable' | translate }}
           </button>
           <button ngbDropdownItem (click)="enablePlugin(plugin)"
-            *ngIf="plugin.installedVersion && plugin.name !== 'homebridge-config-ui-x' && plugin.disabled">
+            *ngIf="plugin.installedVersion && plugin.name !== 'homebridge-config-ui-x' && plugin.disabled" rtl>
             <i class="far fa-fw fa-check-circle"></i> {{ 'plugins.manage.enable' | translate }}
           </button>
           <button ngbDropdownItem *ngIf="plugin.installedVersion && plugin.name !== 'homebridge-config-ui-x'"
-            (click)="$plugin.uninstallPlugin(plugin)">
+            (click)="$plugin.uninstallPlugin(plugin)" rtl>
             <i class="fas fa-fw fa-trash"></i> {{ 'plugins.button_uninstall' | translate }}
           </button>
         </div>

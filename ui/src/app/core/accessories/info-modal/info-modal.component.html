@@ -11,13 +11,13 @@
       <div class="text-right">
         <label for="hide-accessory" class="hb-uix-switch d-inline pr-3">
           <input type="checkbox" [(ngModel)]="service.hidden" id="hide-accessory">
-          <span [translate]="'accessories.label_hide_this_accessory'">Hide this accessory</span>
+          <span rtl [translate]="'accessories.label_hide_this_accessory'">Hide this accessory</span>
           <span class="hb-uix-slider hb-uix-round"></span>
         </label>
 
         <label for="show-on-dashboard" class="hb-uix-switch d-inline">
           <input type="checkbox" [(ngModel)]="service.onDashboard" id="show-on-dashboard">
-          <span [translate]="'accessories.label_show_on_dashboard'">Show in dashboard widget</span>
+          <span rtl [translate]="'accessories.label_show_on_dashboard'">Show in dashboard widget</span>
           <span class="hb-uix-slider hb-uix-round"></span>
         </label>
 
@@ -26,7 +26,7 @@
     <div class="md-form">
       <input [ngModel]="service.customName || service.serviceName" (ngModelChange)="service.customName = $event"
         type="text" id="form-name" autocomplete="off" class="form-control pl-0 pr-0">
-      <label for="form-name" class="active" [translate]="'accessories.label_name'">Name</label>
+      <label for="form-name" class="active" rtl [translate]="'accessories.label_name'">Name</label>
     </div>
     <table class="table table-borderless table-hover table-striped table-sm">
       <tbody>

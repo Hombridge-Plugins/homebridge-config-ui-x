@@ -1,5 +1,5 @@
 <div class="flex-column d-flex align-items-stretch h-100 w-100 pb-1">
-  <div style="cursor: move;" class="drag-handler pl-2 pt-1 pr-2" [translate]="'status.cpu.title_cpu'">CPU</div>
+  <div style="cursor: move;" class="drag-handler pl-2 pt-1 pr-2" rtl [translate]="'status.cpu.title_cpu'">CPU</div>
   <canvas class="widget-chart h-100 w-100" baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
     [options]="lineChartOptions" [colors]="lineChartColors" [chartType]="'line'"></canvas>
   <div #widgetbackground class="hb-widget-chart-background"></div>
@@ -7,14 +7,14 @@
     <div class="d-flex justify-content-around flex-wrap w-100">
       <div class="text-center widget-value-parent-wrap">
         <div class="widget-value mb-0">{{ currentLoad | number:'1.0-0' }}%</div>
-        <div class="widget-value-label grey-text" [translate]="'status.cpu.label_load'">CPU Load</div>
+        <div class="widget-value-label grey-text" rtl [translate]="'status.cpu.label_load'">CPU Load</div>
       </div>
       <div class="text-center widget-value-parent-wrap" *ngIf="cpuTemperature.main > 0">
         <div class="widget-value mb-0">
           {{ cpuTemperature.main | convertTemp:(widget.temperatureUnit || $settings.env.temperatureUnits) |
           number:'1.0-0' }}&deg;{{ (widget.temperatureUnit || $settings.env.temperatureUnits || 'C') | uppercase }}
         </div>
-        <div class="widget-value-label grey-text" [translate]="'status.cpu.label_temp'">CPU Temp</div>
+        <div class="widget-value-label grey-text" rtl [translate]="'status.cpu.label_temp'">CPU Temp</div>
       </div>
     </div>
   </div>

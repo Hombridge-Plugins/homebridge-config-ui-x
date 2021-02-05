@@ -1,6 +1,6 @@
 <div class="modal-content" style="min-height: 400px;">
   <div class="modal-header">
-    <h5 class="modal-title" [translate]="'status.widget.label_add_widget'">Add Widget</h5>
+    <h5 class="modal-title" rtl [translate]="'status.widget.label_add_widget'">Add Widget</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
       (click)="activeModal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
@@ -19,19 +19,19 @@
 
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="doResetLayout()"
+    <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="doResetLayout()" rtl
       [translate]="'status.widget.label_reset_layout'">
       <i class="fas fa-history pr-2"></i> Reset Layout
     </button>
     <button *ngIf="!isLayoutUnlocked" type="button" class="btn btn-danger mr-auto" data-dismiss="modal"
-      (click)="doLockLayout()" [translate]="'status.widget.label_lock_layout'">
+      (click)="doLockLayout()" rtl [translate]="'status.widget.label_lock_layout'">
       <i class="fas fa-lock pr-2"></i> Lock Layout
     </button>
     <button *ngIf="isLayoutUnlocked" type="button" class="btn btn-danger mr-auto" data-dismiss="modal"
-      (click)="doUnlockLayout()" [translate]="'status.widget.label_unlock_layout'">
+      (click)="doUnlockLayout()" rtl [translate]="'status.widget.label_unlock_layout'">
       <i class="fas fa-lock pr-2"></i> Unlock Layout
     </button>
-    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')"
+    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="activeModal.dismiss('Cross click')" rtl
       [translate]="'form.button_close'">Close</button>
   </div>
 </div>

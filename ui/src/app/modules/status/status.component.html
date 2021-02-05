@@ -3,7 +3,8 @@
 
   <button *ngIf="consoleStatus === 'up' && $auth.user.admin" (click)="addWidget()"
     class="btn btn-primary btn-floating add-widget-button"
-    ngbTooltip="{{ (options.draggable.enabled ? 'status.widget.label_add_widget' : 'status.widget.label_layout_locked') | translate }}">
+    ngbTooltip="{{ (options.draggable.enabled ? 'status.widget.label_add_widget' : 'status.widget.label_layout_locked') | translate }}"
+    rtl>
     <i class="fas fa-plus" [ngClass]="{
       'fa-plus': options.draggable.enabled,
       'fa-lock': !options.draggable.enabled
